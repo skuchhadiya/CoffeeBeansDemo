@@ -1,0 +1,38 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="17.12.0" />
+    <PackageReference Include="Moq" Version="4.20.72" />
+    <PackageReference Include="MSTest" Version="3.6.4" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Src\Core\CoffeeBeansDemo.Application\CoffeeBeansDemo.Application.csproj" />
+    <ProjectReference Include="..\..\Src\Core\CoffeeBeansDemo.Domain\CoffeeBeansDemo.Domain.csproj" />
+    <ProjectReference Include="..\..\Src\Infrastructure\CoffeeBeansDemo.Infrastructure\CoffeeBeansDemo.Infrastructure.csproj" />
+    <ProjectReference Include="..\..\Src\Infrastructure\CoffeeBeansDemo.Persistence\CoffeeBeansDemo.Persistence.csproj" />
+    <ProjectReference Include="..\..\Src\Presentation\CoffeeBeansDemo.Api\CoffeeBeansDemo.Api.csproj" />
+  </ItemGroup>
+
+	<ItemGroup>
+		<Content Include="TestData\*.*">
+			<CopyToOutputDirectory>Always</CopyToOutputDirectory>
+		</Content>
+	</ItemGroup>
+
+  <ItemGroup>
+    <Using Include="Microsoft.VisualStudio.TestTools.UnitTesting" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Api\" />
+  </ItemGroup>
+
+</Project>

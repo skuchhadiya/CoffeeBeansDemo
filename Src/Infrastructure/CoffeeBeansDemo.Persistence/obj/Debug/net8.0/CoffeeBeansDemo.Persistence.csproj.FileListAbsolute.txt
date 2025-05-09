@@ -1,0 +1,13 @@
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\bin\Debug\net8.0\CoffeeBeansDemo.Persistence.deps.json
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\bin\Debug\net8.0\CoffeeBeansDemo.Persistence.dll
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\bin\Debug\net8.0\CoffeeBeansDemo.Persistence.pdb
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.csproj.AssemblyReference.cache
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.AssemblyInfoInputs.cache
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.AssemblyInfo.cs
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.csproj.CoreCompileInputs.cache
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.sourcelink.json
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.dll
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\refint\CoffeeBeansDemo.Persistence.dll
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\CoffeeBeansDemo.Persistence.pdb
+C:\Users\mcasa\source\repos\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence\obj\Debug\net8.0\ref\CoffeeBeansDemo.Persistence.dll
