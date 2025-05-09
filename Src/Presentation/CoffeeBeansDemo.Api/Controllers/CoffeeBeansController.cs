@@ -9,44 +9,46 @@ namespace CoffeeBeansDemo.Api.Controllers
     [Route("api/[controller]")]
     public class CoffeeBeansController(IMediator mediator) : ControllerBase
     {
-        [HttpGet]
+        //[AllowAnonymous]
+        [HttpGet(Name = "GetAllCoffeeBanesProducts")]
         public async Task<IActionResult> GetAll()
         {
             return Ok(await mediator.Send(new GetAllCoffeeBeansProductsQuery()));
         }
 
-        [HttpPut]
+        //[AllowAnonymous] 
+        [HttpGet("botd", Name = "GetBeanOfTheDay")]
+        public async Task<IActionResult> GetBotdData()
+        {
+            return Ok(await mediator.Send(new GetBOTDProductInformationQuery()));
+        }
+
+        //[Authorize] //In real word this route must be sucure 
+        [HttpPut(Name = "AddCoffeeBanesProduct")]
         public async Task<IActionResult> Add([FromBody] EditableCoffeeBeanProduct requestPayload)
         {
             return Ok(await mediator.Send(new AddProductCommand() { RequestPayload = requestPayload }));
         }
 
 
-        [HttpPost]
+        //[Authorize] //In real word this route must be sucure 
+        [HttpPost(Name = "EditCoffeeBanesProduct")]
         public async Task<IActionResult> Edit([FromBody] CoffeeBeanEditDto requestPayload)
         {
            // return Ok();
             return Ok(await mediator.Send(new EditProductCommand() { RequestPayload = requestPayload }));
         }
 
-
-        [HttpDelete("{id}")]
+        //[Authorize] //In real word this route must be sucure 
+        [HttpDelete("{id}",Name = "DeleteCoffeeBanesProduct") ]
         public async Task<IActionResult> Delete(Guid id)
         {
 
             return Ok(await mediator.Send(new RemoveProductCommand() { Id = id }));
         }
 
-        //In real word this route must be sucure
-        [HttpGet("botd")]
-        public async Task<IActionResult> GetBotdData()
-        {
-            return Ok(await mediator.Send(new GetBOTDProductInformationQuery()));
-        }
-
-
-        //In real word this route must be sucure
-        [HttpGet("seed-data")]
+        //[Authorize]   //In real word this route must be sucure 
+        [HttpGet("seed-data", Name = "SeedDataInTheDatabase")]
         public async Task<IActionResult> SeedData()
         {
             return Ok(await mediator.Send(new RunInitialDataSeedCommand()));
