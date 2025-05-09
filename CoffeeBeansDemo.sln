@@ -10,9 +10,9 @@ EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Docs", "Docs", "{E1BD8199-1F2B-48F5-8823-A9B06F38B476}"
 	ProjectSection(SolutionItems) = preProject
 		Coding Challeng.txt = Coding Challeng.txt
-		How To Run Project.md = How To Run Project.md
+		Docs\How To Run Project.md = Docs\How To Run Project.md
+		How To.txt = How To.txt
 		README.md = README.md
-		Docs\Tech used.docx = Docs\Tech used.docx
 	EndProjectSection
 EndProject
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Presentation", "Presentation", "{A45CA7BE-7A47-4DA3-A9DD-CF5E6A023D9F}"
@@ -37,6 +37,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoffeeBeansDemoUnitTest", "
 EndProject
 Project("{E24C65DC-7377-472B-9ABA-BC803B73C61A}") = "coffee-beans-demo", "Src\Presentation\Ui\coffee-beans-demo\", "{E56949BB-3977-895D-18AB-646339D2E41E}"
 	ProjectSection(WebsiteProperties) = preProject
+		TargetFrameworkMoniker = ".NETFramework,Version%3Dv4.8"
 		Debug.AspNetCompiler.VirtualPath = "/localhost_54987"
 		Debug.AspNetCompiler.PhysicalPath = "Src\Presentation\Ui\coffee-beans-demo\"
 		Debug.AspNetCompiler.TargetPath = "PrecompiledWeb\localhost_54987\"
