@@ -19,7 +19,7 @@ coverage
 /obj/Debug/net8.0
 /obj
 /bin
-
+/obj\Debug\net8.0
 
 # Editor directories and files
 .vscode/*

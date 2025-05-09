@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("CoffeeBeansDemo.Domain")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+86b523bb591c4e03bb96333a293085a734899667")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+f85c11dc76c30f8a3f7e31c455833652f44c5734")]
 [assembly: System.Reflection.AssemblyProductAttribute("CoffeeBeansDemo.Domain")]
 [assembly: System.Reflection.AssemblyTitleAttribute("CoffeeBeansDemo.Domain")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
