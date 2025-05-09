@@ -17,8 +17,9 @@ Running “bean of the day” schedule every 24 hour on coravel scheduler
 Run the Api project 
 	In Swagger Excute DataSeed API
 
-Rund the Ui project 
+Run the Ui project 
 ```sh
+npm i
 npm run dev
 ```
 

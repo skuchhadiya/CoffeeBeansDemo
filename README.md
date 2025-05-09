@@ -1,4 +1,4 @@
-As per the challenge I have done both challenge. And also Integrated the API from backend to frontend
+As per the challenge I have done both the challenge. And also Integrated the API from backend to frontend
 Tech used in backend Server Side Application  
 •	C#
 •	.NET Core 8
@@ -7,7 +7,7 @@ Tech used in backend Server Side Application
 •	Hosted Service
 •	MS Test
 •	In-Memory Test
-Tech used frontend Client Side Application 
+Tech used in frontend Client Side Application 
 •	Vue CLI
 •	Vue 3.5
 •	TailwindCSS
@@ -21,18 +21,18 @@ Tech used frontend Client Side Application
 •	Heroicons/vue
 •	Vue-router
 
-I have used clean architecture style with mediator pattern to solve backend application. I know this small application and I possible easily solve using 3 tire architecture.
-I just wanted demo my ability to solve problem in complex  way so in real word if I have same situation  I fill comfortable.
+I have used clean architecture style with mediator pattern to solve backend application. I know this is small application and I possibly easily solve using 3 tier architecture.
+I just wanted to demo my ability to solve problem in complex way so in real word, if I have same situation I'll fill comfortable doing it.
 
-Just for clarity I have learn lot from this challenge new things I have learned are Vue 3.5 it bit difference when I last used 4-5 years ago. Pinia, TailwindCSS. 
-In front end application I possible more use of typescript if I have time and dived home page more in component like filter, Nav, search, Sort etc. 
-Home component should be wrapper of all this component this lacking in my solution in fronted.
+Just for clarity I have learn lot from this challenge new things I have learned are Pinia, TailwindCSS and Vue 3.5 it bit difference when I last used 4-5 years ago.
+In front end application I possible more use of typescript, if i have time then I'll separate home page more in components like filter, Nav, search, Sort etc. 
+HomeView should be wrapper of all this component this lacking in my solution in frontend.
 
-In backend I used caravel scheduler which run on HostedService to make “bean of the day” mechanic easy and configurable. We can run Making “bean of the day” in our chosen time of the day, multiple time of the day by just configuring crone expression.
-You can find more information about crone expression https://crontab.guru/. Also add extra API to send the data from json file 
+In backend I used caravel scheduler which run on hosted Service to make “bean of the day” mechanic easy and configurable. We can run making “bean of the day” in our chosen time of the day, multiple time of the day by just configuring crone expression.
+You can find more information about crone expression https://crontab.guru/. Also add extra API to seed the data from json file 
 
-There is lot more I can do in this project  like I can add Identity database feature for login and authorising  user and create policy base access to API. 
-Also able to add middleware for better error handling, add more test coverage. 
+There is lot more I can do in this project like I can add Identity database feature for login and authorising user and create policy base access to API. 
+Also able to add middleware for better error handling, add more test coverage as missing some sinario in the test. 
 
 
 I have configure e2e test as well and have added couple of test to start with but not cover all scenarios but you can test this scenario manually.
