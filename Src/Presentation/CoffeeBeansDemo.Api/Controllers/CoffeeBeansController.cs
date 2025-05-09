@@ -23,6 +23,13 @@ namespace CoffeeBeansDemo.Api.Controllers
             return Ok(await mediator.Send(new GetBOTDProductInformationQuery()));
         }
 
+        //[AllowAnonymous] 
+        [HttpGet("search", Name = "GetSearchResult")]
+        public async Task<IActionResult> GetSearchResult([FromQuery] SearchParams searchParams)
+        {
+            return Ok(await mediator.Send(new GetSearchResultQuery() { SearchParams = searchParams }));
+        }
+
         //[Authorize] //In real word this route must be sucure 
         [HttpPut(Name = "AddCoffeeBanesProduct")]
         public async Task<IActionResult> Add([FromBody] EditableCoffeeBeanProduct requestPayload)

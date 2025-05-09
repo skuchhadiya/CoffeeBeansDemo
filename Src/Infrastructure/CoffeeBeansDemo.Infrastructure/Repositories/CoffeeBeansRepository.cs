@@ -28,6 +28,27 @@ namespace CoffeeBeansDemo.Infrastructure.Repository
 
         }
 
+        public Task<List<CoffeeBeanDto>> GetSearchAsync(SearchParams searchParams, CancellationToken token)
+        {
+            var xy = string.IsNullOrEmpty(searchParams.Name);
+            var u = string.IsNullOrEmpty(searchParams.Country);
+            var b = searchParams.Index == null;
+            var d = searchParams.Id == null;
+            var m = searchParams.IsBOTD == null;
+            var searchData = from k in context.CoffeeBeans
+                             where (string.IsNullOrEmpty(searchParams.Name) || k.Name.StartsWith(searchParams.Name)) &&
+                                    (string.IsNullOrEmpty(searchParams.Colour) || k.Colour.StartsWith(searchParams.Colour)) &&
+                                    (string.IsNullOrEmpty(searchParams.Country) || k.Country.StartsWith(searchParams.Country)) &&
+                                    (string.IsNullOrEmpty(searchParams.Cost) || k.Cost.StartsWith(searchParams.Cost)) &&
+                                    (string.IsNullOrEmpty(searchParams.Description) || k.Description.Contains(searchParams.Description)) &&
+                                    (string.IsNullOrEmpty(searchParams.Id) || k.Id.ToString() == searchParams.Id.Trim()) &&
+                                    (searchParams.Index == null || k.Index == searchParams.Index) &&
+                                    (searchParams.IsBOTD == null || k.IsBOTD == searchParams.IsBOTD)
+                             select k;
+            return searchData.Select(x => new CoffeeBeanDto(x)).ToListAsync(token);
+
+        }
+
         public Task<int> UpdateAsync(CoffeeBeanEditDto coffeeBeanDto, CancellationToken token)
         {
             var entity = context.CoffeeBeans.SingleOrDefault(x => x.Id == new Guid(coffeeBeanDto.Id));

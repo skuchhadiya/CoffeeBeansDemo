@@ -8,6 +8,7 @@ namespace CoffeeBeansDemo.Infrastructure.Abstrartions
     {
         IQueryable<CoffeeBean> GetIQueryable();
         Task<List<CoffeeBeanDto>> GetAllAsync(CancellationToken token);
+        Task<List<CoffeeBeanDto>> GetSearchAsync(SearchParams searchParams, CancellationToken token);
         Task<CoffeeBeanDto?> AddAsync(CoffeeBean coffeeBean, CancellationToken token);
         Task<int> UpdateAsync(CoffeeBeanEditDto coffeeBeanDto, CancellationToken token);
 

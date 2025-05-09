@@ -16,7 +16,7 @@ Data base set-up need using your local or any sqlServer database connection stri
 		"CoffeeBeansDbConnection": "Server=<Your local sql server name>;Database=CoffeeBeansDb;Trusted_Connection=True;MultipleActiveResultSets=true"
 	}
 
-Migration command need to run as per below scriptw before project run
+Migration command need to run as per below script before project run
 	
 	dotnet ef --project <Your Local Path Wwere clone this repo>\CoffeeBeansDemo\Src\Infrastructure\CoffeeBeansDemo.Persistence --startup-project <Your Local Path Where clone this repo>\CoffeeBeansDemo\Src\Presentation\CoffeeBeansDemo.Api migrations add Initial
 
@@ -28,9 +28,9 @@ Running “bean of the day” schedule every 2 minutes on coravel scheduler
 
 	"CronExpressionForScheduleBOTD": "*/2 * * * *" 
 	
-For information about how set crone expression please visit https://crontab.guru/ 
+For information about how to set crone expression please visit https://crontab.guru/ 
 	
-Run the Api project 
+Run the api project 
 
 	In Swagger Excute SeedDataInTheDatabase API
 
