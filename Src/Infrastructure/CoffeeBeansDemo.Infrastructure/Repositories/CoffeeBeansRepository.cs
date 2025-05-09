@@ -9,6 +9,8 @@ namespace CoffeeBeansDemo.Infrastructure.Repository
 {
     public class CoffeeBeansRepository(CoffeeBeansDemoContext context) : ICoffeeBeansRepository
     {
+
+
         public async Task<CoffeeBeanDto?> AddAsync(CoffeeBean coffeeBean, CancellationToken token)
         {
             var item = await context.CoffeeBeans.AddAsync(coffeeBean, token);
@@ -36,12 +38,12 @@ namespace CoffeeBeansDemo.Infrastructure.Repository
             var d = searchParams.Id == null;
             var m = searchParams.IsBOTD == null;
             var searchData = from k in context.CoffeeBeans
-                             where (string.IsNullOrEmpty(searchParams.Name) || k.Name.StartsWith(searchParams.Name)) &&
-                                    (string.IsNullOrEmpty(searchParams.Colour) || k.Colour.StartsWith(searchParams.Colour)) &&
-                                    (string.IsNullOrEmpty(searchParams.Country) || k.Country.StartsWith(searchParams.Country)) &&
-                                    (string.IsNullOrEmpty(searchParams.Cost) || k.Cost.StartsWith(searchParams.Cost)) &&
-                                    (string.IsNullOrEmpty(searchParams.Description) || k.Description.Contains(searchParams.Description)) &&
-                                    (string.IsNullOrEmpty(searchParams.Id) || k.Id.ToString() == searchParams.Id.Trim()) &&
+                             where (string.IsNullOrEmpty(searchParams.Name) || k.Name.ToLower().StartsWith(searchParams.Name.Trim().ToLower())) &&
+                                    (string.IsNullOrEmpty(searchParams.Colour) || k.Colour.ToLower().StartsWith(searchParams.Colour.Trim().ToLower())) &&
+                                    (string.IsNullOrEmpty(searchParams.Country) || k.Country.ToLower().StartsWith(searchParams.Country.Trim().ToLower())) &&
+                                    (string.IsNullOrEmpty(searchParams.Cost) || k.Cost.ToLower().StartsWith(searchParams.Cost.Trim().ToLower())) &&
+                                    (string.IsNullOrEmpty(searchParams.Description) || k.Description.ToLower() == searchParams.Description.ToLower() || k.Description.Contains(searchParams.Description.Trim().ToLower())) &&
+                                    (string.IsNullOrEmpty(searchParams.Id) || k.Id.ToString().ToLower() == searchParams.Id.Trim().ToString().Trim().ToLower()) &&
                                     (searchParams.Index == null || k.Index == searchParams.Index) &&
                                     (searchParams.IsBOTD == null || k.IsBOTD == searchParams.IsBOTD)
                              select k;
@@ -67,12 +69,12 @@ namespace CoffeeBeansDemo.Infrastructure.Repository
 
         }
 
-        public Task<CoffeeBeanDto?> GetCurrentBOTDAsync(CancellationToken token)
+        public async Task<CoffeeBeanDto?> GetCurrentBOTDAsync(CancellationToken token)
         {
-            return context.CoffeeBeans.AsNoTracking()
-                .Select(x => new CoffeeBeanDto(x))
-                .Where(x => x.IsBOTD == true)
-                .SingleOrDefaultAsync(token);
+            var coffeeBean = await context.CoffeeBeans.AsNoTracking()
+                .SingleOrDefaultAsync(x => x.IsBOTD == true, token);
+            return new CoffeeBeanDto(coffeeBean);
+
         }
 
         public async Task<bool> MakeBOTDAsync(Guid id, CancellationToken token)
